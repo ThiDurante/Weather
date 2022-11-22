@@ -13,7 +13,7 @@ function Home() {
       <Search />
       <section
         ref={allCards}
-        className="allCards"
+        // className="allCards"
       >
         {!weather.error ? (
           weather.daily.time.map((day, index) => (
@@ -30,9 +30,9 @@ function Home() {
         ) : (
           <div>
             {weather.error === "Location doesn't exist" ? (
-              <p>Location doesn't exist</p>
+              <p className="msg">Location doesn't exist</p>
             ) : (
-              'Type in a location'
+              <p className="msg">Type in a location</p>
             )}
           </div>
         )}

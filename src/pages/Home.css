@@ -33,8 +33,7 @@ body {
 
 .active {
   display: flex;
-  transition-timing-function: ease;
-  transition-duration: 2s;
+  transition-duration:  1s;
   /* background-color: rgb(13, 58, 109); */
   width: 85%;
   gap: 20px;
@@ -65,5 +64,15 @@ body {
   width: 100px;
 }
 
+.msg {
+  color: white;
+}
+
+.card > p {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
 

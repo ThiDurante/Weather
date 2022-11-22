@@ -38,25 +38,27 @@ const Search = () => {
 
   return (
     <section className="search">
-      <label htmlFor="search">
-        <SlMagnifier className="magnifier" />
-        <input
-          placeholder="City"
-          className="search-input"
-          type="text"
-          name="search"
-          id="search"
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-        />
-      </label>
-      <button
-        className="search-btn"
-        type="button"
-        onClick={getCity}
-      >
-        Check Weather
-      </button>
+      <div>
+        <label htmlFor="search">
+          <SlMagnifier className="magnifier" />
+          <input
+            placeholder="City"
+            className="search-input"
+            type="text"
+            name="search"
+            id="search"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+        </label>
+        <button
+          className="search-btn"
+          type="button"
+          onClick={getCity}
+        >
+          Check Weather
+        </button>
+      </div>
       {searchResult.admin1 && weather.daily && (
         <p className="searched-city">
           {searchResult.admin2 ? `${searchResult.admin2} - ` : null}
