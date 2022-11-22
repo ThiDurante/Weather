@@ -20,14 +20,14 @@ export default function WeatherProvider({ children }) {
       } 
       getWeather()
     } else {
-    setWeather({ error: "Location doesn't exist"})
+    setWeather({ error: "true"})
 
   }
   }, [location])
   
 
 
-  return (<WeatherContext.Provider value={{ user, setUser, location, setLocation, weather, allCards }}>
+  return (<WeatherContext.Provider value={{ user, setUser, location, setLocation, weather, allCards, setWeather }}>
   <div>{ children }</div>
   </WeatherContext.Provider>)
 }

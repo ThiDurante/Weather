@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 import weatherContext from '../context/WeatherContext';
+import './Login.css';
 
 const Login = () => {
   const {user, setUser} = useContext(weatherContext);
@@ -19,11 +20,12 @@ const Login = () => {
   };
 
   return user.login ? (
-    <section>
+    <section className="login">
       <p>Welcome {user.name}</p>
       <p>Today will rain?</p>
       {/* ask user to set a home city, fetch for that city once set */}
       <p>Favorites</p>
+      <h2>this part is not working yet :D</h2>
       <button
         type="button"
         onClick={logout}
@@ -32,15 +34,17 @@ const Login = () => {
       </button>
     </section>
   ) : (
-    <form>
-      <div>Login: </div>
+    <form className="login">
+      <h2>Login </h2>
       <input
+        placeholder="username"
         type="text"
         name={userName}
         autoComplete="username"
         onChange={handleChange}
       />
       <input
+        placeholder="password"
         type="password"
         autoComplete="current-password"
       />

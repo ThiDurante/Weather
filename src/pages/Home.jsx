@@ -8,8 +8,8 @@ function Home() {
   const {weather, allCards} = useContext(weatherContext);
   console.log(weather);
   return (
-    <main>
-      <h1>Welcome to Thiago Durante's Weather App!</h1>
+    <main className="home-container">
+      <h1 className="title">Welcome to Thiago Durante's Weather App!</h1>
       <Search />
       <section
         ref={allCards}

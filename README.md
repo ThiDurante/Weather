@@ -6,7 +6,8 @@ I used 2 apis from <a href="https://open-meteo.com/en">open-meteo</a>, one to co
 
 Its a simple weather app where you can search the location you want 😃
 
-You can clone the repository, use npm i and after installation npm start to visualize locally.
+You can clone the repository, use **npm i** and after installation **npm start** to visualize locally.
 
 Reviews and suggestions are always welcome 😁
-Thank you.
+
+### Thank you.

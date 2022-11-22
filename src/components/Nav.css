@@ -1,0 +1,8 @@
+.nav-btn-dark {
+  border: none;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 700;
+}
