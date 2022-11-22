@@ -5,13 +5,18 @@ const Search = () => {
   const {setLocation} = useContext(weatherContext);
   const [searchValue, setSearchValue] = useState('');
   const [searchResult, setSearchResult] = useState('');
+  console.log(searchResult);
   const getCity = async () => {
     try {
       const request = await fetch(
         `https://geocoding-api.open-meteo.com/v1/search?name=${searchValue}`
       );
       const data = await request.json();
-      if (data.results) setSearchResult(data.results[0]);
+      if (data.results) {
+        setSearchResult(data.results[0]);
+      } else {
+        setSearchResult({Error: "Location doesn't exist"});
+      }
     } catch (error) {
       setSearchResult(error);
     }
@@ -24,6 +29,8 @@ const Search = () => {
         longitude: searchResult.longitude,
         timezone: searchResult.timezone,
       });
+    } else {
+      setLocation('');
     }
   }, [searchResult, setLocation]);
 
@@ -43,6 +50,12 @@ const Search = () => {
       >
         Check Weather
       </button>
+      {searchResult.admin1 && (
+        <p>
+          {searchResult.admin2 ? `${searchResult.admin2} -` : null}
+          {searchResult.admin1} - {searchResult.country}
+        </p>
+      )}
     </section>
   );
 };

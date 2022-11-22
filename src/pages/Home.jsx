@@ -2,28 +2,40 @@ import React, {useContext} from 'react';
 import Search from '../components/Search';
 import WeatherCard from '../components/WeatherCard';
 import weatherContext from '../context/WeatherContext';
+import './Home.css';
 
 function Home() {
-  const {weather} = useContext(weatherContext);
+  const {weather, allCards} = useContext(weatherContext);
   console.log(weather);
   return (
     <main>
       <h1>Welcome to Thiago Durante's Weather App!</h1>
       <Search />
-      <section className="all-cards">
-        {Object.keys(weather).length > 0
-          ? weather.daily.time.map((day, index) => (
-              <div
-                className="card"
-                key={day}
-              >
-                <WeatherCard
-                  weather={weather}
-                  index={index}
-                />
-              </div>
-            ))
-          : null}
+      <section
+        ref={allCards}
+        className="allCards"
+      >
+        {!weather.error ? (
+          weather.daily.time.map((day, index) => (
+            <div
+              className="card"
+              key={day}
+            >
+              <WeatherCard
+                weather={weather}
+                index={index}
+              />
+            </div>
+          ))
+        ) : (
+          <div>
+            {weather.error === "Location doesn't exist" ? (
+              <p>Location doesn't exist</p>
+            ) : (
+              'Type in a location'
+            )}
+          </div>
+        )}
       </section>
     </main>
   );

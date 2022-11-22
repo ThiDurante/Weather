@@ -1,0 +1,25 @@
+.error {
+  background-color: gray;
+  transition: 0.5;
+  animation: fadeIn 2s;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.allCards {
+  background-color: aqua;
+  width: 150px;
+}
+
+.active {
+  display: flex;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+  background-color: red;
+}
+
+
+
