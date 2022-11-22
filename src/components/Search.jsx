@@ -59,7 +59,7 @@ const Search = () => {
       </button>
       {searchResult.admin1 && weather.daily && (
         <p className="searched-city">
-          {searchResult.admin2 ? `${searchResult.admin2} -` : null}
+          {searchResult.admin2 ? `${searchResult.admin2} - ` : null}
           {searchResult.admin1} - {searchResult.country}
         </p>
       )}
