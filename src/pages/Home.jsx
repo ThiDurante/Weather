@@ -13,7 +13,7 @@ function Home() {
       <Search />
       <section
         ref={allCards}
-        // className="allCards"
+        className="allCards"
       >
         {!weather.error ? (
           weather.daily.time.map((day, index) => (

@@ -1,8 +1,16 @@
 .nav-btn-dark {
   border: none;
-  background-color: white;
+  background-color: #39146d;
+  color: white;
   padding: 5px;
   border-radius: 5px;
   margin-top: 10px;
   font-weight: 700;
+
+}
+
+.nav-btn-dark:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+
 }

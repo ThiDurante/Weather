@@ -10,12 +10,12 @@ export default function WeatherProvider({ children }) {
 
 
   useEffect(() => {
+    const allCardsEle = allCards.current
     if (location.latitude) {
       const getWeather = async () => {
         const request = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,rain_sum,windspeed_10m_max,winddirection_10m_dominant&timezone=${location.timezone}`)
         const data = await request.json()
         setWeather(data)
-        const allCardsEle = allCards.current
         allCardsEle.className = 'active'
       } 
       getWeather()

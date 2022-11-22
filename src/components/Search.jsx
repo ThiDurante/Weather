@@ -4,7 +4,8 @@ import './Search.css';
 import {SlMagnifier} from 'react-icons/sl';
 
 const Search = () => {
-  const {setLocation, setWeather, weather} = useContext(weatherContext);
+  const {setLocation, setWeather, weather, allCards} =
+    useContext(weatherContext);
   const [searchValue, setSearchValue] = useState('');
   const [searchResult, setSearchResult] = useState('');
   console.log(searchResult);
@@ -17,7 +18,9 @@ const Search = () => {
       if (data.results) {
         setSearchResult(data.results[0]);
       } else {
+        const allCardsEle = allCards.current;
         setWeather({error: "Location doesn't exist"});
+        allCardsEle.className = 'allCards';
       }
     } catch (error) {
       setSearchResult(error);
