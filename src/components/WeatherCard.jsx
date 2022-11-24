@@ -15,7 +15,7 @@ const WeatherCard = ({weather, index}) => {
 
   return (
     <>
-      <p>Day: {day.time[index].slice(8)}</p>
+      {/* <p>Day: {day.time[index].slice(8)}</p>
       <p>
         <BsFillSunFill className="sunrise" /> {day.sunrise[index].slice(11)}
       </p>
@@ -36,7 +36,36 @@ const WeatherCard = ({weather, index}) => {
         className="img"
         src={img}
         alt="weather-icon"
-      />
+      /> */}
+      <div class="container">
+        <div class="box">
+          <span class="title">Day: {day.time[index].slice(8)}</span>
+          <div>
+            <img
+              className="img"
+              src={img}
+              alt="weather-icon"
+            />
+            <strong>
+              <FiWind className="wind" /> {day.windspeed_10m_max[index]} Km/h
+            </strong>
+            <p>
+              <FaTemperatureHigh className="temphigh" />{' '}
+              {day.temperature_2m_max[index]}{' '}
+              <FaTemperatureLow className="templow" />{' '}
+              {day.temperature_2m_min[index]}
+            </p>
+            <span>
+              <BsFillSunFill className="sunrise" />{' '}
+              {day.sunrise[index].slice(11)}
+            </span>{' '}
+            <span>
+              <BsFillMoonFill className="sunset" />{' '}
+              {day.sunset[index].slice(11)}
+            </span>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
