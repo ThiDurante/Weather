@@ -4,7 +4,7 @@ import WeatherProvider from './context/WeatherProvider';
 import Nav from './components/Nav';
 import Tech from './pages/Tech';
 import Dev from './pages/Dev';
-import Login from './components/Login';
+// import Login from './components/Login';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Nav />
       <Route exact path="/" component={ Home } />
       <Route exact path="/tech" component={ Tech } />
-      <Route exact path="/dev" component={ Dev } />
-      <Login />
+      {/* <Route exact path="/dev" component={ Dev } /> */}
+      {/* <Login /> */}
     </WeatherProvider>
   );
 }

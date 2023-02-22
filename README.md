@@ -8,6 +8,8 @@ Its a simple weather app where you can search the location you want 😃
 
 You can clone the repository, use **npm i** and after installation **npm start** to visualize locally.
 
+This app is supposed to be running on PC monitors, NOT suited for mobile.
+
 Reviews and suggestions are always welcome 😁
 
 ### Thank you.

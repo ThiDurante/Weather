@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Nav.css';
 
 const Nav = () => {
@@ -18,13 +18,13 @@ const Nav = () => {
         type="button"
         onClick={() => history.push('/tech')}
       >
-        Who is the Dev?
+        {/* Who is the Dev?
       </button>
       <button
         className="nav-btn-dark"
         type="button"
         onClick={() => history.push('/tech')}
-      >
+      > */}
         Tech Used
       </button>
     </nav>
