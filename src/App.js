@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import WeatherProvider from './context/WeatherProvider';
 import Nav from './components/Nav';
 import Tech from './pages/Tech';
-import Dev from './pages/Dev';
+// import Dev from './pages/Dev';
 // import Login from './components/Login';
 
 function App() {
